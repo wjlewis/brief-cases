@@ -1,0 +1,25 @@
+{
+  "name": "brief-cases",
+  "version": "1.0.0",
+  "description": "A small utility for working with sum datatypes",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/william-j-lewis/brief-cases.git"
+  },
+  "keywords": [
+    "algebraic",
+    "algebraic datatypes",
+    "discriminated unions",
+    "fp",
+    "functional",
+    "sum types",
+    "variant records"
+  ],
+  "author": "William Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/william-j-lewis/brief-case/issues"
+  },
+  "homepage": "https://github.com/william-j-lewis/brief-case#readme"
+}
