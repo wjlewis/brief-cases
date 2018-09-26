@@ -180,7 +180,7 @@ function Variant(name, args) {
 }
 Variant.prototype.cases = function(opts) {
   if (opts[this._name]) return opts[this._name](...this._args);
-  else if (opts._) return opts._(...this._args);  // *** "catch-all"
+  else if (opts._) return opts._();  // *** "catch-all"
   else throw new Error(`cases: missing case for "${this._name}"`);
 };
 ```
@@ -249,7 +249,7 @@ const createSumType = (...variants) => {
 
   Variant.prototype.cases = function(opts) {
     if (opts[this._name]) return opts[this._name](...this._args);
-    else if (opts._) return opts._(...this._args);
+    else if (opts._) return opts._();
     else throw new Error(`cases: missing case for "${this._name}"`);
   };
 
