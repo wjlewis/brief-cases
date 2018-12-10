@@ -25,7 +25,7 @@ This is a simple matter of calling `createSumType` with the names of the desired
 const Maybe = createSumType('Nothing', 'Just');
 ```
 
-The value `Maybe` has two methods named `Nothing` and `Just` that can be used to construct values as follows:
+The value `Maybe` has two "static methods" named `Nothing` and `Just` that can be used to construct values as follows:
 
 ```javascript
 const justAThree = Maybe.Just('3');
@@ -121,31 +121,31 @@ Maybe.of(7)
 
 ### Another Example
 As another example, consider how one might represent expressions in the *lambda calculus*.
-The possible expressions are `Lit`eral expressions, consisting of a name of type `String`, `Abs`tractions, consisting of an identifier of type `String` along with a "body" that is itself a lambda calculus expression, and `App`lications, consisting of two lambda calculus expressions.
+The possible expressions are `Name`s, consisting of a `String`, `Abs`tractions, consisting of an identifier of type `String` along with a "body" that is itself a lambda calculus expression, and `App`lications, consisting of two lambda calculus expressions.
 
 We can construct the `Expr`ession type as follows:
 
 ```javascript
-const Expr = createSumType('Lit', 'Abs', 'App');
+const Expr = createSumType('Name', 'Abs', 'App');
 ```
 
 Individual expressions are now a cinch to create:
 
 ```javascript
-const { Lit, Abs, App } = Expr;
+const { Name, Abs, App } = Expr;
 
 // id = \x . x
-const id = Abs('x', Lit('x'));
+const id = Abs('x', Name('x'));
 
 // konst = \x . \y . x
-const konst = Abs('x', Abs('y', Lit('x')));
+const konst = Abs('x', Abs('y', Name('x')));
 
 // subst = \x . \y . \z . ((x z) (y z))
 const subst =
 Abs('x',
   Abs('y',
     Abs('z',
-      App(App(Lit('x'), Lit('z')), App(Lit('y'), Lit('z')))
+      App(App(Name('x'), Name('z')), App(Name('y'), Name('z')))
     )
   )
 );
@@ -156,9 +156,9 @@ Additionally, as above, we can define methods that are available on all values c
 ```javascript
 Expr.prototype.toString = function() {
   return this.cases({
-    Lit: name          => name,
-    Abs: (id, body)    => `(lambda (${id}) ${body.toString()})`,
-    App: (rator, rand) => `(${rator.toString()} ${rand.toString()})`
+    Name: name          => name,
+    Abs : (id, body)    => `(lambda (${id}) ${body.toString()})`,
+    App : (rator, rand) => `(${rator.toString()} ${rand.toString()})`
   });
 };
 

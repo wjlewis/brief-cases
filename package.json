@@ -1,6 +1,6 @@
 {
   "name": "brief-cases",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A small utility for working with sum datatypes",
   "main": "index.js",
   "repository": {
