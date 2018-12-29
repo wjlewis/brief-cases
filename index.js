@@ -1,8 +1,3 @@
-//               _                 _
-//              [_]  brief-cases  [_]
-//
-// A small utility for working with sum datatypes
-
 module.exports = (...variants) => {
   function SumType() {}
 
