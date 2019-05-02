@@ -1,4 +1,4 @@
-module.exports = (...variants) => {
+export default (...variants) => {
   function SumType() {}
 
   function Variant(name, args) {
