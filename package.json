@@ -23,12 +23,10 @@
   },
   "keywords": [
     "algebraic",
-    "algebraic datatypes",
-    "applicative",
-    "discriminated unions",
+    "datatype",
     "functional",
-    "sum types",
-    "variant records"
+    "sum",
+    "union"
   ],
   "author": "William Lewis",
   "license": "MIT",
