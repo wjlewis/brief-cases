@@ -4,9 +4,9 @@ import { uglify } from 'rollup-plugin-uglify';
 module.exports = [{
   input: 'src/index.js',
   output: {
-      file: 'dist/bundle.umd.js',
-      format: 'umd',
-      name: 'brief-cases',
+    file: 'dist/bundle.umd.js',
+    format: 'umd',
+    name: 'brief-cases',
   },
   plugins: [
     babel({

@@ -4,9 +4,7 @@
   "description": "A small utility for working with sum datatypes",
   "main": "dist/bundle.cjs.js",
   "unpkg": "dist/bundle.umd.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "rollup -c"
   },
