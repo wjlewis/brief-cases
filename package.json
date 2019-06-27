@@ -4,13 +4,18 @@
   "description": "A small utility for working with sum datatypes",
   "main": "dist/bundle.cjs.js",
   "unpkg": "dist/bundle.umd.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "BABEL_ENV=test jest --config=jest.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
     "rollup": "^1.10.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-uglify": "^6.0.2"

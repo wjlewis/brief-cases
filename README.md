@@ -185,4 +185,4 @@ If no function has been provided for the variant in question and no "catch-all" 
 Lastly, any properties added to the object created by calling `createSumType(<v1>, <v2>, ..., <vn>)` (including its `prototype`) will be available to values created by the variant constructors themselves.
 This makes it very convenient to define methods shared by all variants of a particular type.
 
-For more information, see the [documentation](DOC.md) of the [source code](index.js).
+For more information, see the [documentation](DOC.md) of the [source code](lib/index.js).
