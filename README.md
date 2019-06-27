@@ -1,4 +1,11 @@
 # brief-cases
+
+## Install
+
+```
+$ npm i brief-cases
+```
+
 ## A small utility for working with sum datatypes
 
 Many datatypes, particularly those having inductive definitions, are conveniently represented as "sum types", also known as "discriminated unions" or "variant records".
