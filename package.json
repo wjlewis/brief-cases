@@ -1,6 +1,6 @@
 {
   "name": "brief-cases",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A small utility for working with sum datatypes",
   "main": "dist/bundle.cjs.js",
   "unpkg": "dist/bundle.umd.js",
